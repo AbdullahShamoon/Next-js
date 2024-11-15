@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React-toastify
+🎉 React-Toastify allows you to add notifications to your app with ease. No more nonsense!\
+["***Documentation***"](https://fkhadra.github.io/react-toastify/introduction)
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Installation
+```
+npm install --save react-toastify
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The gist
+```
+  import React from 'react';
+  import { ToastContainer, toast } from 'react-toastify';
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+  import 'react-toastify/dist/ReactToastify.css';
+  // minified version is also included
+  // import 'react-toastify/dist/ReactToastify.min.css';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  function App(){
+    const notify = () => toast("Wow so easy !");
 
-## Learn More
+    return (
+      <div>
+        <button onClick={notify}>Notify !</button>
+        <ToastContainer />
+      </div>
+    );
+  }
+  ```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ***Impportant*** - Remember to render the ToastContainer once in your application tree. If you can't figure out where to put it, rendering it in the application root would be the best bet.
