@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <>
-            <div className="text-2xl text-center text-blue-600">- Admin Layout -</div>
+            <div className="text-2xl text-center text-blue-600"> Admin Layout </div>
             {children}
         </>
     );

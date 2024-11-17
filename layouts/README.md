@@ -16,3 +16,6 @@ export default function RootLayout({ children }) {
   )
 }
 ```
+
+- If you make any folder name in parenthesis () then that route will be ommited /
+eg - (admin)/adminlogin/pages.js - This will be accessed at localhost:3000/adminlogin
